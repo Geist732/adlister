@@ -1,10 +1,10 @@
-public class Ad {
+public class Ad {  //Instance variables
     private long id;
     private long userId;
     private String title;
     private String description;
 
-    public Ad(long id, long userId, String title, String description) {
+    public Ad(long id, long userId, String title, String description) {   //Method
         this.id = id;
         this.userId = userId;
         this.title = title;
@@ -13,7 +13,7 @@ public class Ad {
 
     public long getId() {
         return id;
-    }
+    }      //Getters and Setters
 
     public void setId(long id) {
         this.id = id;

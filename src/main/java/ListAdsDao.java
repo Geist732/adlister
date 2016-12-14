@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListAdsDao implements Ads {
-    private List<Ad> ads;
+public class ListAdsDao implements Ads {                          //Implementing the Ads interface
+    private List<Ad> ads;                                         //Creating new ads array
 
     public List<Ad> all() {
         if (ads == null) {
@@ -11,7 +11,7 @@ public class ListAdsDao implements Ads {
         return ads;
     }
 
-    private List<Ad> generateAds() {
+    public static List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
         ads.add(new Ad(
             1,
@@ -38,5 +38,6 @@ public class ListAdsDao implements Ads {
             "Must have strong Java skills"
         ));
         return ads;
+
     }
 }

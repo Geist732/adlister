@@ -11,5 +11,6 @@
     <div class="container">
         <h1>Welcome to the Adlister!</h1>
     </div>
+    <%@ include file="ads/index.jsp"%>
 </body>
 </html>
