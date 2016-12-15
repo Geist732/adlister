@@ -6,10 +6,19 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Created by Nick on 12/14/16.
+ */
 @WebServlet(name = "AdsIndexServlet", urlPatterns = "/ads")
 public class AdsIndexServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("ads", DaoFactory.getAdsDao().all());
-        request.getRequestDispatcher("/ads/index.jsp").forward(request, response);
+
+        List<Ad> ads = DaoFactory.getAdsDao().all();
+        request.setAttribute("ads", ads);
+        request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request,response);
     }
 }
